@@ -923,9 +923,6 @@ html[dir=ltr] .plus-bottom-img {
   .menu.is-active {
     transform: translate(0%);
   }
-  .darkmode .menu {
-    background-color: var(--night-300);
-  }
 }
 .menu-header {
   display: none;
@@ -988,9 +985,6 @@ html[dir=ltr] .plus-bottom-img {
   }
   .menu-header.is-active > .menu-arrow {
     display: block;
-  }
-  .darkmode .menu-header.is-active {
-    background-color: var(--night-100);
   }
   .menu-arrow {
     display: none;
@@ -1507,12 +1501,6 @@ html[dir=ltr] .why-choosen .gym-img {
 /*-----------------------
      Styles
 -------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
 .trainning-section {
   padding: 60px 0;
 }
@@ -1554,6 +1542,73 @@ html[dir=ltr] .why-choosen .gym-img {
 /*-----------------------
      Styles
 -------------------------*/
+.line-img {
+  margin-bottom: -40px;
+}
+
+.swiper-slide:nth-of-type(1) .container-img, .swiper-slide:nth-of-type(4n + 1) .container-img {
+  transition: all 1s ease-out;
+  margin-top: 10px;
+}
+.swiper-slide:nth-of-type(2) .container-img, .swiper-slide:nth-of-type(4n + 2) .container-img {
+  transition: all 1s ease-out;
+  margin-top: 20px;
+}
+.swiper-slide:nth-of-type(3) .container-img, .swiper-slide:nth-of-type(4n + 3) .container-img {
+  transition: all 1s ease-out;
+  margin-top: 30px;
+}
+.swiper-slide:nth-of-type(4) .container-img, .swiper-slide:nth-of-type(4n + 4) .container-img {
+  transition: all 1s ease-out;
+  margin-top: 35px;
+}
+
+.clients-section {
+  padding: 45px 0 60px 0;
+}
+.clients-section .box .container-img .main-img {
+  height: 216px;
+  position: relative;
+}
+.clients-section .box .container-img::after {
+  content: " ";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  background: #C0AD88;
+  width: 100%;
+  height: 100%;
+  right: 0;
+  left: 0;
+  mix-blend-mode: color;
+}
+.clients-section .box .container-img::before {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  left: 0;
+  content: "";
+  width: 1px;
+  height: 100%;
+  background: #C0AD88;
+  display: block;
+  margin: auto;
+  z-index: -1;
+}
+
+select {
+  width: 100%;
+  border: 1px solid #5E5E5E;
+  min-height: 47px;
+  border-radius: 10px;
+  background: transparent;
+  padding: 0 8px;
+  color: #5E5E5E;
+  font-size: 14px;
+  outline: 0;
+}
+
 /*-----------------------
     Package-section
 -------------------------*/
@@ -1623,12 +1678,6 @@ html[dir=ltr] .why-choosen .gym-img {
   font-family: "Cairo-Bold", sans-serif;
 }
 
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
 /*-----------------------
     Contact-us Styles
 -------------------------*/
@@ -1769,86 +1818,4 @@ html[dir=ltr] footer .absolute-bottom-footer {
   footer .col-links {
     justify-content: center;
   }
-}
-
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*/
-/*-----------------------
-     Styles
--------------------------*//*# sourceMappingURL=general.css.map */
+}/*# sourceMappingURL=general.css.map */

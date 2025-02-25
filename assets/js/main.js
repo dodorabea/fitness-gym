@@ -10,65 +10,62 @@
   // };
   /*=====Header=====*/
   const menu = document.querySelector(".menu");
-const menuInner = menu.querySelector(".menu-inner");
-const menuArrow = menu.querySelector(".menu-arrow");
-const burger = document.querySelector(".burger");
-const overlay = document.querySelector(".overlay");
+  const menuInner = menu.querySelector(".menu-inner");
+  const menuArrow = menu.querySelector(".menu-arrow");
+  const burger = document.querySelector(".burger");
+  const overlay = document.querySelector(".overlay");
 
-// Navbar Menu Toggle Function
-function toggleMenu() {
-   menu.classList.toggle("is-active");
-   overlay.classList.toggle("is-active");
-}
+  // Navbar Menu Toggle Function
+  function toggleMenu() {
+    menu.classList.toggle("is-active");
+    overlay.classList.toggle("is-active");
+  }
 
-// Show Mobile Submenu Function
-function showSubMenu(children) {
-   subMenu = children.querySelector(".submenu");
-   subMenu.classList.add("is-active");
-   subMenu.style.animation = "slideLeft 0.35s ease forwards";
-   const menuTitle = children.querySelector("i").parentNode.childNodes[0]
-      .textContent;
-   menu.querySelector(".menu-title").textContent = menuTitle;
-   menu.querySelector(".menu-header").classList.add("is-active");
-}
+  // Show Mobile Submenu Function
+  function showSubMenu(children) {
+    subMenu = children.querySelector(".submenu");
+    subMenu.classList.add("is-active");
+    subMenu.style.animation = "slideLeft 0.35s ease forwards";
+    const menuTitle =
+      children.querySelector("i").parentNode.childNodes[0].textContent;
+    menu.querySelector(".menu-title").textContent = menuTitle;
+    menu.querySelector(".menu-header").classList.add("is-active");
+  }
 
-// Hide Mobile Submenu Function
-function hideSubMenu() {
-   subMenu.style.animation = "slideRight 0.35s ease forwards";
-   setTimeout(() => {
+  // Hide Mobile Submenu Function
+  function hideSubMenu() {
+    subMenu.style.animation = "slideRight 0.35s ease forwards";
+    setTimeout(() => {
       subMenu.classList.remove("is-active");
-   }, 300);
+    }, 300);
 
-   menu.querySelector(".menu-title").textContent = "";
-   menu.querySelector(".menu-header").classList.remove("is-active");
-}
+    menu.querySelector(".menu-title").textContent = "";
+    menu.querySelector(".menu-header").classList.remove("is-active");
+  }
 
-// Toggle Mobile Submenu Function
-function toggleSubMenu(e) {
-   if (!menu.classList.contains("is-active")) {
+  // Toggle Mobile Submenu Function
+  function toggleSubMenu(e) {
+    if (!menu.classList.contains("is-active")) {
       return;
-   }
-   if (e.target.closest(".menu-dropdown")) {
+    }
+    if (e.target.closest(".menu-dropdown")) {
       const children = e.target.closest(".menu-dropdown");
       showSubMenu(children);
-   }
-}
+    }
+  }
 
-// Fixed Navbar Menu on Window Resize
-window.addEventListener("resize", () => {
-   if (window.innerWidth >= 992) {
+  // Fixed Navbar Menu on Window Resize
+  window.addEventListener("resize", () => {
+    if (window.innerWidth >= 992) {
       if (menu.classList.contains("is-active")) {
-         toggleMenu();
+        toggleMenu();
       }
-   }
-});
+    }
+  });
 
-
-
-// Initialize All Event Listeners
-burger.addEventListener("click", toggleMenu);
-overlay.addEventListener("click", toggleMenu);
-
+  // Initialize All Event Listeners
+  burger.addEventListener("click", toggleMenu);
+  overlay.addEventListener("click", toggleMenu);
 
   /*=====AOS animation=====*/
   AOS.init({
@@ -140,37 +137,67 @@ overlay.addEventListener("click", toggleMenu);
       prevEl: ".swiper-button-prev.products-arrow",
     },
   });
- /*=====portfolio Programs=====*/
-var swiperPortfolio = new Swiper(".mySwiper.portfolio", {
-  slidesPerView: 1,
-  spaceBetween: 16,
-  loop: false,
-  breakpoints: {
-    0: {
-      slidesPerView: 1.1,
+  /*=====portfolio Programs=====*/
+  var swiperPortfolio = new Swiper(".mySwiper.portfolio", {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: false,
+    breakpoints: {
+      0: {
+        slidesPerView: 1.1,
+      },
+      400: {
+        slidesPerView: 1.5,
+      },
+      880: {
+        slidesPerView: 2.25,
+      },
+      1025: {
+        slidesPerView: 3,
+      },
+      1366: {
+        slidesPerView: 3.25,
+      },
     },
-    400: {
-      slidesPerView: 1.5,
+    pagination: {
+      el: ".swiper-pagination.portfolio-pagination",
+      type: "fraction",
     },
-    880: {
-      slidesPerView: 2.25,
+    navigation: {
+      nextEl: ".swiper-button-next.portfolio-arrow",
+      prevEl: ".swiper-button-prev.portfolio-arrow",
     },
-    1025: {
-      slidesPerView: 3,
-    },
-    1366: {
-      slidesPerView: 3.25,
-    },
-  },
-  pagination: {
-    el: ".swiper-pagination.portfolio-pagination",
-    type: "fraction",
-  },
-  navigation: {
-    nextEl: ".swiper-button-next.portfolio-arrow",
-    prevEl: ".swiper-button-prev.portfolio-arrow",
-  },
-});
+  });
+    /*=====portfolio Programs=====*/
+    var swiperClients = new Swiper(".mySwiper.Clients", {
+      slidesPerView: 1,
+      spaceBetween: 16,
+      speed: 1800,
+      
+      direction: "horizontal",
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+      freeMode: true,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.1,
+        },
+        400: {
+          slidesPerView: 2.15,
+        },
+        880: {
+          slidesPerView: 2,
+        },
+        1025: {
+          slidesPerView: 4,
+        },
+        1366: {
+          slidesPerView: 5,
+        },
+      },
+    });
   /*====Back to top==== */
   var amountScrolled = 200;
   var amountScrolledNav = 25;
