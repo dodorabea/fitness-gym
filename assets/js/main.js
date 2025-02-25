@@ -140,7 +140,37 @@ overlay.addEventListener("click", toggleMenu);
       prevEl: ".swiper-button-prev.products-arrow",
     },
   });
-
+ /*=====portfolio Programs=====*/
+var swiperPortfolio = new Swiper(".mySwiper.portfolio", {
+  slidesPerView: 1,
+  spaceBetween: 16,
+  loop: false,
+  breakpoints: {
+    0: {
+      slidesPerView: 1.1,
+    },
+    400: {
+      slidesPerView: 1.5,
+    },
+    880: {
+      slidesPerView: 2.25,
+    },
+    1025: {
+      slidesPerView: 3,
+    },
+    1366: {
+      slidesPerView: 3.25,
+    },
+  },
+  pagination: {
+    el: ".swiper-pagination.portfolio-pagination",
+    type: "fraction",
+  },
+  navigation: {
+    nextEl: ".swiper-button-next.portfolio-arrow",
+    prevEl: ".swiper-button-prev.portfolio-arrow",
+  },
+});
   /*====Back to top==== */
   var amountScrolled = 200;
   var amountScrolledNav = 25;
