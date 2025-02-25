@@ -1818,4 +1818,213 @@ html[dir=ltr] footer .absolute-bottom-footer {
   footer .col-links {
     justify-content: center;
   }
+}
+
+/*-----------------------
+    Styles
+-------------------------*/
+.shopping-cart tbody, .shopping-cart td, .shopping-cart tfoot, .shopping-cart th, .shopping-cart thead, .shopping-cart tr {
+  white-space: nowrap;
+}
+.shopping-cart .title-section {
+  font-weight: bolder;
+  font-family: "Cairo-Bold", sans-serif;
+}
+.shopping-cart .card {
+  background: #f2eadf;
+  border: 1px solid #C0AD88;
+  border-radius: 8px;
+}
+.shopping-cart .card.price {
+  padding: 16px 20px 22px 20px;
+}
+.shopping-cart .card.card-table {
+  padding: 16px 32px 8px 32px;
+}
+.shopping-cart .card .header-part h5 {
+  color: #000000;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.shopping-cart .card .body-part .list-price li p {
+  font-size: 14px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.shopping-cart .card .body-part .list-price li span {
+  font-size: 12px;
+}
+.shopping-cart .card .body-part .list-price li .discount {
+  color: #FF3B30;
+}
+.shopping-cart .card .body-part .list-price li:last-child span {
+  font-size: 16px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.shopping-cart .card .body-part .list-price li:last-child {
+  padding-top: 16px;
+  border-top: 1px solid #C0AD88;
+}
+.shopping-cart .card .body-part .btn-primary {
+  font-size: 14px;
+  width: 100%;
+  color: #000000;
+  border-radius: 16px;
+  height: 40px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.shopping-cart .card .body-part table .product-span {
+  background: #C0AD88;
+  width: 110px;
+  height: 80px;
+  border-radius: 8px;
+}
+.shopping-cart .card .body-part table .product-span img {
+  width: 100px;
+}
+.shopping-cart .card .body-part table .product-name {
+  font-size: 15px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.shopping-cart .card .body-part table .code {
+  font-size: 13px;
+  font-family: "Cairo-Medium", sans-serif;
+}
+.shopping-cart .card .body-part table thead tr {
+  border-bottom: 1px solid #C0AD88;
+  padding-bottom: 8px;
+}
+.shopping-cart .card .body-part table thead tr th {
+  background: #f2eadf;
+  font-weight: normal;
+  font-family: "Cairo-Medium", sans-serif;
+}
+.shopping-cart .card .body-part table thead tr th:last-child {
+  text-align: left;
+  text-decoration: underline;
+}
+.shopping-cart .card .body-part table tbody tr {
+  border-color: inherit;
+  border-style: solid;
+  border-width: 6px 0;
+  border-color: #f2eadf;
+}
+.shopping-cart .card .body-part table tbody tr td:last-child {
+  text-align: left;
+}
+.shopping-cart .card .body-part table tbody tr td .cancel {
+  padding-left: 16px;
+}
+.shopping-cart .card .body-part table tbody tr td {
+  background: #FFF0D9;
+}
+.shopping-cart .card .body-part table tbody tr td .span-price {
+  font-size: 12px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+
+.complete-product-span {
+  background: #C0AD88;
+  width: 74px;
+  height: 60px;
+  border-radius: 8px;
+}
+.complete-product-span img {
+  width: 60px;
+}
+
+.quantity__input {
+  width: 25px;
+  height: 19px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background: transparent;
+  border: 0;
+  outline: 0;
+  box-shadow: none;
+}
+
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #8184a1;
+}
+
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #fff;
+}
+
+.complete-card .title-section {
+  font-weight: bolder;
+  font-family: "Cairo-Bold", sans-serif;
+}
+.complete-card .card {
+  background: #f2eadf;
+  border: 1px solid #C0AD88;
+  border-radius: 8px;
+}
+@media (min-width: 767px) {
+  .complete-card .card {
+    padding: 16px 32px 22px 32px;
+  }
+}
+@media (max-width: 768.98px) {
+  .complete-card .card {
+    padding: 16px;
+  }
+}
+.complete-card .card .header-part h5 {
+  font-family: "Cairo-Bold", sans-serif;
+}
+.complete-card .card .header-part a {
+  color: #000000;
+  font-size: 14px;
+  text-decoration: underline !important;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.complete-card .list-price li p {
+  font-size: 16px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.complete-card .list-price li span {
+  font-size: 14px;
+}
+.complete-card .list-price li .discount {
+  color: #FF3B30;
+}
+.complete-card .list-price li:last-child span {
+  font-size: 16px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.complete-card .list-price li:last-child {
+  padding-top: 16px;
+  border-top: 1px solid #C0AD88;
+}
+.complete-card .btn-primary {
+  font-size: 16px;
+  width: 100%;
+  color: #000000;
+  border-radius: 16px;
+  height: 50px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+@media (min-width: 767px) {
+  .complete-card .btn-primary {
+    max-width: 500px;
+    margin: auto;
+  }
+}
+@media (max-width: 768.98px) {
+  .complete-card .btn-primary {
+    width: 100%;
+  }
+}
+.complete-card .complete-shipping p {
+  color: #000000;
+  font-size: 16px;
+  font-family: "Cairo-SemiBold", sans-serif;
+}
+.complete-card .complete-shipping .info {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: "Cairo-Medium", sans-serif;
 }/*# sourceMappingURL=general.css.map */
