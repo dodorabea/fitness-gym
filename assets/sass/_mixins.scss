@@ -73,6 +73,7 @@ woff2 woff ttf eot);
 }
 
 //howToCall: vector-image
+// @include position(absolute, 0, 0, 0, 0);
 @mixin position($type,  $top : null, $right : null, $bottom : null, $left : null ) {
     position: $type;
     @if ($top != null) {
