@@ -165,20 +165,19 @@ input {
     -webkit-transition: all 0.7s ease-out;
     transition: all 0.7s ease-out;
     font-family: $font-family-SemiBold;
-
     .arrow-icon {
         width: 33px;
         height: 33px;
         border-radius: 100%;
         background: map_get($theme-colors, primary);
         margin: auto;
-        transform: rotate(27deg);
         @include position(absolute, 0, unset, 0, -20px);
         -webkit-transition: all 0.7s ease-out;
         transition: all 0.7s ease-out;
-
+        @include rtl(transform, rotate(-27deg), rotate(27deg));
         img {
             width: 14px;
+            @include rtl(transform, scaleX(-1), scaleX(1));
         }
     }
 
@@ -187,7 +186,7 @@ input {
         background: map_get($theme-colors, primary);
 
         .arrow-icon {
-            transform: unset;
+            transform: unset !important;
             @include position(relative, 0, unset, 0, 0);
         }
     }
@@ -243,6 +242,7 @@ input {
 
 .circle-image {
     z-index: -1;
+    @include rtl(transform, scaleX(-1), scaleX(1));
     @include position(absolute, 0, unset, 0, 0);
 
     @media (min-width: 992px) and (max-width: 1200px) {
@@ -535,6 +535,7 @@ button.back-to-top.show:active {
     display: flex;
     align-items: center;
     flex: 0 0 17%;
+    gap: 1rem;
 }
 
 .navbar-center {
@@ -546,7 +547,11 @@ button.back-to-top.show:active {
     flex: 0 0 17%;
     align-items: center;
     justify-content: flex-end;
-    column-gap: 1.5rem;
+
+    @media (min-width: 992px) {
+        column-gap: 1.5rem;
+    }
+
     align-items: center;
 
     .cart-notification {
@@ -608,11 +613,13 @@ button.back-to-top.show:active {
 
             img {
                 width: 14px;
+                @include rtl(transform, scaleX(-1), scaleX(1));
             }
         }
 
         @media (max-width: 991.98px) {
             font-size: 12px;
+            padding: 0.5rem 0.25rem;
 
             img {
                 width: 12px;
@@ -623,11 +630,20 @@ button.back-to-top.show:active {
     }
 }
 
+.btn-language {
+    text-transform: capitalize;
+    min-height: 34px;
+    border-radius: 30px;
+    padding: 0 10px;
+    font-family: $font-family-medium;
+}
+
 @media only screen and (max-width: 992px) {
 
     .navbar-left,
     .navbar-right {
         flex: 0 0 auto;
+        column-gap: 0.5rem;
     }
 
 
@@ -792,7 +808,7 @@ button.back-to-top.show:active {
     cursor: pointer;
     width: 1.6rem;
     height: 1rem;
-    margin-left: 1rem;
+    @include property_dir('margin', 'left', 0.25rem);
     display: none;
     background: transparent;
 }
@@ -1237,7 +1253,7 @@ button.back-to-top.show:active {
 
     .vector-image {
         @include position(absolute, 0, unset, unset, 0);
-
+        @include rtl(transform, scaleX(-1), scaleX(1));
         @media (min-width: 992px) and (max-width: 1200px) {
             width: 400px;
         }
@@ -1578,6 +1594,7 @@ select {
 
                 img {
                     width: 16px;
+                    @include rtl(transform, scaleX(-1), scaleX(1));
                 }
             }
         }
@@ -1861,7 +1878,7 @@ footer {
                             font-family: $font-family-medium;
 
                             &:last-child {
-                                text-align: left;
+                                @include rtl('text-align',right , left);
                                 text-decoration: underline;
                             }
                         }
@@ -1879,11 +1896,11 @@ footer {
                     tr {
                         td {
                             &:last-child {
-                                text-align: left;
+                                @include rtl('text-align',right , left);
                             }
 
                             .cancel {
-                                padding-left: 16px;
+                                @include property_dir('padding', 'left', 16px);
                             }
                         }
 
@@ -2199,6 +2216,7 @@ footer {
 
         img {
             width: 13px;
+            @include rtl(transform, scaleX(-1), scaleX(1));
         }
 
         @media (min-width: 992px) {
@@ -2240,9 +2258,7 @@ footer {
     .radio {
         font-size: inherit;
         margin: 0;
-        position: absolute;
-        left: 26px;
-        top: 11px;
+        @include position(absolute, 11px, unset, unset, 26px);
     }
 
     .card:has(.radio:checked) {
@@ -2285,6 +2301,7 @@ footer {
         }
     }
 }
+
 /*-----------------------
     Styles
 -------------------------*/
@@ -2295,33 +2312,40 @@ footer {
         border: 1px solid #C0AD88;
         border-radius: 8px;
         padding: 32px;
-        img{
+
+        img {
             width: 80px;
             margin: auto;
+            @include rtl(transform, scaleX(-1), scaleX(1));
         }
+
         p {
             font-size: 24px;
             line-height: 30px;
             color: #000000;
             font-family: $font-family-Bold;
         }
+
         span {
             color: rgba(16, 16, 16, 1);
             font-size: 1.2rem;
             font-family: $font-family-SemiBold;
         }
-        .btn-primary{
+
+        .btn-primary {
             min-height: 55px;
             border-radius: 0;
             color: #000000;
             width: calc(100% - 55px);
             font-family: $font-family-Bold;
-            img{
-                width:16px;
+
+            img {
+                width: 16px;
                 margin: 0;
             }
         }
-        .watsapp-btn{
+
+        .watsapp-btn {
             min-width: 55px;
             min-height: 55px;
             font-size: 29px;

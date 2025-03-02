@@ -32,29 +32,47 @@
 </head>
 
 <body id="vertical">
-
     <!-- ============================================================== -->
     <!-- header -->
     <!-- ============================================================== -->
     <header class="header" id="header">
         <nav class="navbar container">
-            <section class="navbar-left">
+            <section class="navbar-left d-flex align-items-center">
                 <a href="#" class="brand">
                     <img height="80px" src="assets/image/logo/logo.svg" alt="logo" />
                 </a>
-
+                <button class="btn btn-outline-dark btn-language d-flex align-items-center gap-2">
+                    <img width="24px" src="assets/image/icons/global.svg" alt="icon" />
+                    <span class="d-lg-block d-none">english</span>
+                </button>
             </section>
             <section class="navbar-center">
                 <span class="overlay"></span>
                 <div class="menu" id="menu">
                     <ul class="menu-inner">
-                        <li class="menu-item"><a href="#" class="menu-link active">الرئيسية</a></li>
-                        <li class="menu-item"><a href="#" class="menu-link">تواصل معنا</a></li>
-                        <li class="menu-item"><a href="#" class="menu-link">المنتجات</a></li>
+                        <li class="menu-item"><a href="index.html" class="menu-link active">الرئيسية</a></li>
+                        <li class="menu-item"><a href="contact.html" class="menu-link">تواصل معنا</a></li>
+                        <li class="menu-item"><a href="letsStart.html" class="menu-link">المنتجات</a></li>
                     </ul>
                 </div>
             </section>
             <section class="navbar-right">
+                <ul class="d-flex align-items-center gap-2">
+                    <li>
+                        <a href="#"
+                            class="btn btn-primary btn-subscribe d-flex align-items-center justify-content-center gap-2">
+                            <span>اشتركي الان</span>
+                            <img src="assets/image/icons/arrow-button.svg" alt="image" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="chart.html"
+                            class="cart-notification d-flex align-items-center justify-content-center position-relative">
+                            <span class="d-flex align-items-center justify-content-center">2</span>
+                            <img src="assets/image/icons/cart.svg" alt="image" />
+                        </a>
+                    </li>
+                </ul>
                 <div class="burger" id="burger">
                     <span class="burger-line"></span>
                     <span class="burger-line"></span>
@@ -79,13 +97,15 @@
                         <div class="body-part">
                             <ul class="d-flex flex-wrap gap-2 mb-3">
                                 <li>
-                                    <span class="complete-product-span d-flex align-items-center justify-content-center">
-                                        <img  src="assets/image/img/products.png" alt="img" />
+                                    <span
+                                        class="complete-product-span d-flex align-items-center justify-content-center">
+                                        <img src="assets/image/img/products.png" alt="img" />
                                     </span>
                                 </li>
                                 <li>
-                                    <span class="complete-product-span d-flex align-items-center justify-content-center">
-                                        <img  src="assets/image/img/products.png" alt="img" />
+                                    <span
+                                        class="complete-product-span d-flex align-items-center justify-content-center">
+                                        <img src="assets/image/img/products.png" alt="img" />
                                     </span>
                                 </li>
                             </ul>
@@ -114,7 +134,7 @@
                                 الدفع 55 EGP</a>
                             <div class="complete-shipping mt-3">
                                 <p class="d-flex align-items-center gap-2">
-                                    <img src="assets/image/icons/lock.svg" alt="icon"/>
+                                    <img src="assets/image/icons/lock.svg" alt="icon" />
                                     <span>إتمام شراء آمن - مشفر بتقنية SSL</span>
                                 </p>
                                 <span class="info">نضمن لك حماية بياناتك المالية والشخصية أثناء كل معاملة</span>
@@ -126,6 +146,91 @@
         </div>
     </section>
 
+    <!-- ============================================================== -->
+    <!-- Footer Section-->
+    <!-- ============================================================== -->
+    <footer class="position-relative">
+        <div class="footer-content">
+            <div class="container">
+                <div class="row align-items-center row-gap-3">
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <a href="#">
+                            <img class="img-fluid mb-3" width="100px" src="assets/image/logo/logo.svg" alt="Logo" />
+                        </a>
+                        <p class="mb-3">
+                            هذا النص هو مثال لنص يمكن أن يستبدل في نفس المساحة، لقد تم توليد هذا النص من مولد النص
+                            العربى،
+                        </p>
+                        <ul class="social-media d-flex align-items-center gap-2">
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/insta.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/fb.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/snap.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/tiktok.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/twitter.svg" alt="icon" />
+                                </a>
+                            </li>
+                            <li>
+                                <a class="d-flex align-items-center justify-content-center" href="#">
+                                    <img src="assets/image/icons/youtube.svg" alt="icon" />
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!---->
+                    <div class="col-lg-3 col-md-6 col-sm-12 d-flex align-items-center col-links">
+                        <div>
+                            <h6 class="mb-2">روابط سريعة</h6>
+                            <ul class="d-flex flex-column row-gap-2">
+                                <li>
+                                    <a href="#">الرئيسية</a>
+                                </li>
+                                <li>
+                                    <a href="#">الشروط والاحكام</a>
+                                </li>
+                                <li>
+                                    <a href="#">سياسة الخصوصية</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <!---->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <h6 class="mb-2">تواصل معنا</h6>
+                        <ul class="d-flex flex-column row-gap-2">
+                            <li>
+                                <a href="#">2972 Westheimer Rd. Santa Ana, Illinois 85486 </a>
+                            </li>
+                            <li>
+                                <a href="#">(205) 555-0100</a>
+                            </li>
+                            <li>
+                                <a href="#">Lorem ipsum dolor sit amet,orum@gmail.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <img class="absolute-bottom-footer" src="assets/image/logo/footer-logo.svg" alt="logo" />
+    </footer>
     <!-- ============================================================== -->
     <!-- back-to-top -->
     <!-- ============================================================== -->

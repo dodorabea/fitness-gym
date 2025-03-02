@@ -500,7 +500,6 @@ input {
   border-radius: 100%;
   background: #C0AD88;
   margin: auto;
-  transform: rotate(27deg);
   position: absolute;
   top: 0;
   bottom: 0;
@@ -514,15 +513,27 @@ html[dir=ltr] .btn-with-hover .arrow-icon {
   right: -20px;
   left: unset;
 }
+html[dir=ltr] .btn-with-hover .arrow-icon {
+  transform: rotate(-27deg);
+}
+html[dir=rtl] .btn-with-hover .arrow-icon {
+  transform: rotate(27deg);
+}
 .btn-with-hover .arrow-icon img {
   width: 14px;
+}
+html[dir=ltr] .btn-with-hover .arrow-icon img {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .btn-with-hover .arrow-icon img {
+  transform: scaleX(1);
 }
 .btn-with-hover:hover {
   color: #000000;
   background: #C0AD88;
 }
 .btn-with-hover:hover .arrow-icon {
-  transform: unset;
+  transform: unset !important;
   position: relative;
   top: 0;
   bottom: 0;
@@ -593,6 +604,12 @@ html[dir=rtl] .arrow-slider {
   position: absolute;
   top: 0;
   bottom: 0;
+}
+html[dir=ltr] .circle-image {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .circle-image {
+  transform: scaleX(1);
 }
 html[dir=rtl] .circle-image {
   right: unset;
@@ -897,6 +914,7 @@ html[dir=ltr] .plus-bottom-img {
   display: flex;
   align-items: center;
   flex: 0 0 17%;
+  gap: 1rem;
 }
 
 .navbar-center {
@@ -908,9 +926,13 @@ html[dir=ltr] .plus-bottom-img {
   flex: 0 0 17%;
   align-items: center;
   justify-content: flex-end;
-  -moz-column-gap: 1.5rem;
-       column-gap: 1.5rem;
   align-items: center;
+}
+@media (min-width: 992px) {
+  .navbar-right {
+    -moz-column-gap: 1.5rem;
+         column-gap: 1.5rem;
+  }
 }
 .navbar-right .cart-notification {
   border-radius: 100%;
@@ -983,20 +1005,37 @@ html[dir=ltr] .navbar-right .cart-notification span {
   .navbar-right .btn-subscribe img {
     width: 14px;
   }
+  html[dir=ltr] .navbar-right .btn-subscribe img {
+    transform: scaleX(-1);
+  }
+  html[dir=rtl] .navbar-right .btn-subscribe img {
+    transform: scaleX(1);
+  }
 }
 @media (max-width: 991.98px) {
   .navbar-right .btn-subscribe {
     font-size: 12px;
+    padding: 0.5rem 0.25rem;
   }
   .navbar-right .btn-subscribe img {
     width: 12px;
   }
 }
 
+.btn-language {
+  text-transform: capitalize;
+  min-height: 34px;
+  border-radius: 30px;
+  padding: 0 10px;
+  font-family: "Cairo-Medium", sans-serif;
+}
+
 @media only screen and (max-width: 992px) {
   .navbar-left,
   .navbar-right {
     flex: 0 0 auto;
+    -moz-column-gap: 0.5rem;
+         column-gap: 0.5rem;
   }
   .navbar-center {
     flex: 0 0 100%;
@@ -1141,9 +1180,14 @@ html[dir=ltr] .navbar-right .cart-notification span {
   cursor: pointer;
   width: 1.6rem;
   height: 1rem;
-  margin-left: 1rem;
   display: none;
   background: transparent;
+}
+html[dir=rtl] .burger {
+  margin-left: 0.25rem;
+}
+html[dir=ltr] .burger {
+  margin-right: 0.25rem;
 }
 
 @media only screen and (max-width: 992px) {
@@ -1559,6 +1603,12 @@ html[dir=ltr] .intro-section .vector-image {
   right: 0;
   left: unset;
 }
+html[dir=ltr] .intro-section .vector-image {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .intro-section .vector-image {
+  transform: scaleX(1);
+}
 @media (min-width: 992px) and (max-width: 1200px) {
   .intro-section .vector-image {
     width: 400px;
@@ -1850,6 +1900,12 @@ select {
 .contact-us-form .form-part .btn-send img {
   width: 16px;
 }
+html[dir=ltr] .contact-us-form .form-part .btn-send img {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .contact-us-form .form-part .btn-send img {
+  transform: scaleX(1);
+}
 .contact-us .title-contact h3 {
   font-family: "Cairo-Bold", sans-serif;
 }
@@ -2075,8 +2131,13 @@ html[dir=ltr] footer .absolute-bottom-footer {
   font-family: "Cairo-Medium", sans-serif;
 }
 .shopping-cart .card .body-part table thead tr th:last-child {
-  text-align: left;
   text-decoration: underline;
+}
+html[dir=ltr] .shopping-cart .card .body-part table thead tr th:last-child {
+  text-align: right;
+}
+html[dir=rtl] .shopping-cart .card .body-part table thead tr th:last-child {
+  text-align: left;
 }
 .shopping-cart .card .body-part table tbody tr {
   border-color: inherit;
@@ -2084,11 +2145,17 @@ html[dir=ltr] footer .absolute-bottom-footer {
   border-width: 6px 0;
   border-color: #f2eadf;
 }
-.shopping-cart .card .body-part table tbody tr td:last-child {
+html[dir=ltr] .shopping-cart .card .body-part table tbody tr td:last-child {
+  text-align: right;
+}
+html[dir=rtl] .shopping-cart .card .body-part table tbody tr td:last-child {
   text-align: left;
 }
-.shopping-cart .card .body-part table tbody tr td .cancel {
+html[dir=rtl] .shopping-cart .card .body-part table tbody tr td .cancel {
   padding-left: 16px;
+}
+html[dir=ltr] .shopping-cart .card .body-part table tbody tr td .cancel {
+  padding-right: 16px;
 }
 .shopping-cart .card .body-part table tbody tr td {
   background: #FFF0D9;
@@ -2349,6 +2416,12 @@ html[dir=ltr] footer .absolute-bottom-footer {
 .lets-start .pay-now img {
   width: 13px;
 }
+html[dir=ltr] .lets-start .pay-now img {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .lets-start .pay-now img {
+  transform: scaleX(1);
+}
 @media (min-width: 992px) {
   .lets-start .pay-now {
     min-width: 200px;
@@ -2384,8 +2457,16 @@ html[dir=ltr] footer .absolute-bottom-footer {
   font-size: inherit;
   margin: 0;
   position: absolute;
-  left: 26px;
   top: 11px;
+  bottom: unset;
+}
+html[dir=rtl] .lets-start .radio {
+  right: unset;
+  left: 26px;
+}
+html[dir=ltr] .lets-start .radio {
+  right: 26px;
+  left: unset;
 }
 .lets-start .card:has(.radio:checked) {
   border: 2px solid #000;
@@ -2436,6 +2517,12 @@ html[dir=ltr] footer .absolute-bottom-footer {
 .complete-order .complete-order-box img {
   width: 80px;
   margin: auto;
+}
+html[dir=ltr] .complete-order .complete-order-box img {
+  transform: scaleX(-1);
+}
+html[dir=rtl] .complete-order .complete-order-box img {
+  transform: scaleX(1);
 }
 .complete-order .complete-order-box p {
   font-size: 24px;
