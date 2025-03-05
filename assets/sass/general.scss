@@ -380,7 +380,45 @@ input {
         opacity: 1;
     }
 }
-
+/*-----------------------
+    breadcrumb
+-------------------------*/
+.breadcrumb {
+    padding: 30px 0;
+    .breadcrumb-item {
+        h3 {
+            color: map_get($theme-colors, secondary);
+            font-family: $font-family-Bold;
+        }
+       
+    }
+}
+/*-----------------------
+terms-condition-section
+-------------------------*/
+.terms-condition-section{
+    padding: 30px 0;
+    h1,h2,h3,h4,h5,h6{
+        margin-bottom: 1rem;
+        color: map_get($theme-colors, secondary);
+        font-family: $font-family-Bold;
+    }
+    p{
+        color: map_get($theme-colors, gray);
+        font-size: 1rem;
+        &:not(:last-child)
+        {
+            margin-bottom: 1rem;
+        }
+    }
+    ul,ol{
+        @include property_dir('padding', 'right', 1rem);
+        li{
+            margin-bottom: 0.5rem;
+            color: map_get($theme-colors, gray);
+        }
+    }
+}
 /*-----------------------
     back-to-top Styles
 -------------------------*/
@@ -1254,7 +1292,11 @@ button.back-to-top.show:active {
     .vector-image {
         @include position(absolute, 0, unset, unset, 0);
         @include rtl(transform, scaleX(-1), scaleX(1));
-        @media (min-width: 992px) and (max-width: 1200px) {
+        @media (min-width: 1200px){
+            height: 680px;
+        }
+        
+        @media (min-width: 992px) and (max-width: 1199.98px) {
             width: 400px;
         }
 
@@ -1294,7 +1336,6 @@ button.back-to-top.show:active {
 -------------------------*/
 .trainning-section {
     padding: 60px 0;
-
     .training-card {
         .header-part {
             img {
@@ -1770,7 +1811,7 @@ footer {
     Styles
 -------------------------*/
 .shopping-cart {
-
+padding: 60px 0;
     tbody,
     td,
     tfoot,
@@ -1956,6 +1997,7 @@ footer {
 }
 
 .complete-card {
+    padding: 70px 0;
     .title-section {
         font-weight: bolder;
         font-family: $font-family-Bold;
@@ -2306,6 +2348,7 @@ footer {
     Styles
 -------------------------*/
 .complete-order {
+    padding: 60px 0;
     .complete-order-box {
         box-shadow: 0px 0px 34px 0px rgba(219, 219, 219, 0.15);
         background: #f2eadf;

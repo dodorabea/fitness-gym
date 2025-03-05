@@ -726,6 +726,42 @@ html[dir=ltr] #preloader-background {
   }
 }
 /*-----------------------
+    breadcrumb
+-------------------------*/
+.breadcrumb {
+  padding: 30px 0;
+}
+.breadcrumb .breadcrumb-item h3 {
+  font-family: "Cairo-Bold", sans-serif;
+}
+
+/*-----------------------
+terms-condition-section
+-------------------------*/
+.terms-condition-section {
+  padding: 30px 0;
+}
+.terms-condition-section h1, .terms-condition-section h2, .terms-condition-section h3, .terms-condition-section h4, .terms-condition-section h5, .terms-condition-section h6 {
+  margin-bottom: 1rem;
+  font-family: "Cairo-Bold", sans-serif;
+}
+.terms-condition-section p {
+  font-size: 1rem;
+}
+.terms-condition-section p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+html[dir=rtl] .terms-condition-section ul, html[dir=rtl] .terms-condition-section ol {
+  padding-right: 1rem;
+}
+html[dir=ltr] .terms-condition-section ul, html[dir=ltr] .terms-condition-section ol {
+  padding-left: 1rem;
+}
+.terms-condition-section ul li, .terms-condition-section ol li {
+  margin-bottom: 0.5rem;
+}
+
+/*-----------------------
     back-to-top Styles
 -------------------------*/
 button.back-to-top {
@@ -1609,7 +1645,12 @@ html[dir=ltr] .intro-section .vector-image {
 html[dir=rtl] .intro-section .vector-image {
   transform: scaleX(1);
 }
-@media (min-width: 992px) and (max-width: 1200px) {
+@media (min-width: 1200px) {
+  .intro-section .vector-image {
+    height: 680px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199.98px) {
   .intro-section .vector-image {
     width: 400px;
   }
@@ -2051,6 +2092,9 @@ html[dir=ltr] footer .absolute-bottom-footer {
 /*-----------------------
     Styles
 -------------------------*/
+.shopping-cart {
+  padding: 60px 0;
+}
 .shopping-cart tbody,
 .shopping-cart td,
 .shopping-cart tfoot,
@@ -2197,6 +2241,9 @@ html[dir=ltr] .shopping-cart .card .body-part table tbody tr td .cancel {
   color: #fff;
 }
 
+.complete-card {
+  padding: 70px 0;
+}
 .complete-card .title-section {
   font-weight: bolder;
   font-family: "Cairo-Bold", sans-serif;
@@ -2507,6 +2554,9 @@ html[dir=ltr] .lets-start .radio {
 /*-----------------------
     Styles
 -------------------------*/
+.complete-order {
+  padding: 60px 0;
+}
 .complete-order .complete-order-box {
   box-shadow: 0px 0px 34px 0px rgba(219, 219, 219, 0.15);
   background: #f2eadf;
